@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>My millionth php site</h1>
+<h1>My php site</h1>
 
 <?php
 echo "Hello World!";

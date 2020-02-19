@@ -1,0 +1,31 @@
+**We are pushing new code to git and then again getting that code and deploying that new code to create new pods of the same name.**
+
+    1  launch.sh
+    2  git clone https://github.com/sarang7798/php-test.git
+    3  cd php-test/.git/
+    4  ls
+    5  cd ..
+    6  ls
+    7  cd ..
+    8  rm -rvf php-test/
+    9  ls
+   10  oc new-app https://github.com/sarang7798/php-test.git
+   11  oc get pods -w
+   12  oc get pods
+   13  oc get pods -o wide
+   14  curl 10.128.0.25
+   15  curl 10.128.0.25:8080
+   16  git clone https://github.com/sarang7798/php-test.git
+   17  cd php-test/
+   18  ls
+   19  vim index.php
+   20  git add .
+   21  git commit -m "3rd try"
+   22  git push origin master
+   23  oc start-build php-test
+   24  oc get pods -w
+   25  oc get pods
+   26  oc get pods -o wide
+   27  curl 10.128.0.28
+   28  curl 10.128.0.28:8080
+   29  history
